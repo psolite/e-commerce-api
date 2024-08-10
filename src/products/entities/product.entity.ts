@@ -1,26 +1,30 @@
 import { Exclude } from "class-transformer";
-import { IsUUID } from "class-validator";
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity()
-export class User {
-    @PrimaryGeneratedColumn('uuid')
-    @IsUUID()
-    id: string
+export class Product {
 
-    @Column({unique: true})
-    username: string
+    @PrimaryGeneratedColumn()
+    id: number
 
-    @Column({unique: true})
-    email: string
+    @Column()
+    name: string
+
+    @Column()
+    description: string
+
+    @Column({ type: 'decimal', precision: 10, scale: 2})
+    price: number
+
+    @Column()
+    quantity: number
 
     @Exclude()
-    @Column()
-    password: string
-
     @CreateDateColumn()
     created_at: Date
 
+    @Exclude()
     @UpdateDateColumn()
     updated_at: Date
 }
+
