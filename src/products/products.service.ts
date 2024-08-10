@@ -22,7 +22,7 @@ export class ProductsService {
 
       return { status: HttpStatus.OK, data: product }
     } catch (error) {
-      console.log(error)
+      // console.log(error)
       throw new BadRequestException()
     }
   }
@@ -53,7 +53,7 @@ export class ProductsService {
   async update(id: number, updateProductDto: UpdateProductDto) {
     const product = await this.findOne(id)
     try {
-      console.log(updateProductDto)
+      // console.log(updateProductDto)
       await this.productRepo.update(id, {
         ...updateProductDto
       })
