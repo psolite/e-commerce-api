@@ -6,6 +6,10 @@ It Allow User to Create account and Login.
 User Can Create and update Product
 Guest or User can order products
 
+
+Justin @thejustinson is the host link below for more info
+https://cake-darkness-ea1.notion.site/Development-Brief-for-Backend-Developers-E-commerce-API-18fc7522430949b79acc36d918cd4745
+
 # How To Set Up and Use
 
 You must have knowledge of NestJs and PostgresSQL
